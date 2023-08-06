@@ -1,7 +1,7 @@
 # snapcraft example
 
 ```
-git clone TODO &&
-cd TODO &&
+git clone git@github.com:SimonSiefke/snap.git &&
+cd snap &&
 snapcraft
 ```
