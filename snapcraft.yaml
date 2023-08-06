@@ -1,0 +1,25 @@
+name: snap-example
+version: git
+summary: Command line weather tool.
+description: |
+  Get current weather:-
+    $ wethr
+  Get current weather in metric units
+    $ wethr --metric
+  Get current weather in imperial units
+    $ wethr --imperial
+
+confinement: strict
+base: core22
+
+apps:
+  snap-example:
+    command: bin/snap-example
+    plugs: [network]
+
+parts:
+  snap-example:
+    plugin: npm
+    npm-include-node: true
+    npm-node-version: 18.17.0
+    source: .
